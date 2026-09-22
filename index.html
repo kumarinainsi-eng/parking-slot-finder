@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="ParkEase Smart Parking Slot Finder">
+    <meta name="theme-color" content="#07111f">
+
+    <title>ParkEase | Smart Parking Slot Finder</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="top">
+    <div class="container nav-wrap">
+
+        <a href="#home" class="brand">
+            <span class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+
+            <span>
+                <strong>Park<span>Ease</span></strong>
+                <small>SMART PARKING</small>
+            </span>
+        </a>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#parking" class="nav-link">Find Slot</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#how-it-works" class="nav-link">How It Works</a>
+        </nav>
+
+        <div class="header-actions">
+            <div class="live-status">
+                <i></i>
+                LIVE
+            </div>
+
+            <button class="icon-button" id="themeButton" title="Toggle visual mode">
+                ◐
+            </button>
+
+            <button class="menu-button" id="menuButton" aria-label="Open menu">
+                ☰
+            </button>
+        </div>
+    </div>
+</header>
+
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+
+    <div class="hero-image"></div>
+    <div class="hero-grid"></div>
+
+    <div class="container hero-content">
+
+        <div class="hero-copy reveal">
+
+            <div class="eyebrow">
+                <span class="pulse-dot"></span>
+                SMART PARKING • LIVE AVAILABILITY
+            </div>
+
+            <h1>
+                Find your space.
+                <span>Park with ease.</span>
+            </h1>
+
+            <p>
+                A smarter way to discover available parking, choose the
+                right slot and navigate through the parking area without
+                unnecessary searching.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#parking" class="primary-button">
+                    Find My Slot
+                    <span>→</span>
+                </a>
+
+                <button class="ghost-button" id="heroDemoButton">
+                    ▶ Watch Demo
+                </button>
+            </div>
+
+            <div class="hero-trust">
+                <div>
+                    <strong id="heroAvailable">37</strong>
+                    <span>Slots Available</span>
+                </div>
+
+                <div>
+                    <strong>3</strong>
+                    <span>Parking Floors</span>
+                </div>
+
+                <div>
+                    <strong>24/7</strong>
+                    <span>Smart Monitoring</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="hero-floating-card reveal">
+
+            <div class="mini-card-top">
+                <span>Parking Pulse</span>
+                <span class="mini-live">LIVE</span>
+            </div>
+
+            <div class="pulse-visual">
+                <div class="pulse-line"></div>
+
+                <div class="pulse-point point-one"></div>
+                <div class="pulse-point point-two"></div>
+                <div class="pulse-point point-three"></div>
+                <div class="pulse-point point-four"></div>
+            </div>
+
+            <div class="pulse-values">
+                <div>
+                    <small>Available</small>
+                    <strong id="pulseAvailable">37</strong>
+                </div>
+
+                <div>
+                    <small>Occupied</small>
+                    <strong id="pulseOccupied">27</strong>
+                </div>
+
+                <div>
+                    <small>Flow</small>
+                    <strong>82%</strong>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="scroll-indicator">
+        <span></span>
+        Explore parking
+    </div>
+</section>
+
+
+<!-- ===================== QUICK SEARCH ===================== -->
+<section class="search-section">
+    <div class="container">
+
+        <div class="quick-search reveal">
+
+            <div class="search-title">
+                <span class="search-icon">⌕</span>
+
+                <div>
+                    <small>QUICK FIND</small>
+                    <h3>What are you parking?</h3>
+                </div>
+            </div>
+
+            <div class="vehicle-options">
+
+                <button class="vehicle-option active" data-vehicle="car">
+                    <span class="vehicle-icon">🚗</span>
+                    <span>Car</span>
+                </button>
+
+                <button class="vehicle-option" data-vehicle="bike">
+                    <span class="vehicle-icon">🏍️</span>
+                    <span>Bike</span>
+                </button>
+
+                <button class="vehicle-option" data-vehicle="ev">
+                    <span class="vehicle-icon">⚡</span>
+                    <span>EV</span>
+                </button>
+
+            </div>
+
+            <button class="find-button" id="quickFindButton">
+                FIND MY SLOT
+                <span>↗</span>
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===================== LIVE STATS ===================== -->
+<section class="stats-strip">
+    <div class="container stats-grid">
+
+        <div class="stat-item">
+            <span class="stat-icon green">●</span>
+            <div>
+                <strong id="availableCount">37</strong>
+                <small>Available</small>
+            </div>
+        </div>
+
+        <div class="stat-item">
+            <span class="stat-icon red">●</span>
+            <div>
+                <strong id="occupiedCount">27</strong>
+                <small>Occupied</small>
+            </div>
+        </div>
+
+        <div class="stat-item">
+            <span class="stat-icon yellow">●</span>
+            <div>
+                <strong id="reservedCount">8</strong>
+                <small>Reserved</small>
+            </div>
+        </div>
+
+        <div class="stat-item">
+            <span class="stat-icon blue">⚡</span>
+            <div>
+                <strong id="evCount">6</strong>
+                <small>EV Charging</small>
+            </div>
+        </div>
+
+        <div class="stat-item">
+            <span class="stat-icon purple">⌁</span>
+            <div>
+                <strong>82%</strong>
+                <small>Parking Flow</small>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===================== PARKING SECTION ===================== -->
+<section class="parking-section" id="parking">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div>
+                <span class="section-kicker">LIVE PARKING GROUND</span>
+
+                <h2>
+                    See the parking.
+                    <span>Choose your space.</span>
+                </h2>
+
+                <p>
+                    Select a floor, filter the parking area and hover over
+                    any slot to understand its current condition.
+                </p>
+            </div>
+
+            <div class="parking-time">
+                <small>LOCAL PARKING TIME</small>
+                <strong id="liveClock">--:--:--</strong>
+            </div>
+
+        </div>
+
+
+        <!-- FLOOR NAV -->
+        <div class="parking-toolbar reveal">
+
+            <div class="floor-tabs">
+
+                <button class="floor-tab active" data-floor="1">
+                    <span>01</span>
+                    Ground
+                </button>
+
+                <button class="floor-tab" data-floor="2">
+                    <span>02</span>
+                    First Floor
+                </button>
+
+                <button class="floor-tab" data-floor="3">
+                    <span>03</span>
+                    Rooftop
+                </button>
+
+            </div>
+
+            <div class="toolbar-tools">
+
+                <button class="tool-button" id="heatmapButton">
+                    ◈ Heatmap
+                </button>
+
+                <button class="tool-button" id="nearestButton">
+                    ◎ Nearest
+                </button>
+
+                <button class="tool-button" id="resetButton">
+                    ↻ Reset
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PARKING EXPERIENCE -->
+        <div class="parking-experience">
+
+            <!-- LEFT SIDE FILTERS -->
+            <aside class="parking-sidebar reveal">
+
+                <div class="sidebar-label">SMART FILTERS</div>
+
+                <button class="smart-filter active" data-filter="all">
+                    <span class="filter-symbol all-symbol">✦</span>
+                    <span>
+                        <strong>All Spaces</strong>
+                        <small>Show everything</small>
+                    </span>
+                    <b>→</b>
+                </button>
+
+                <button class="smart-filter" data-filter="available">
+                    <span class="filter-symbol available-symbol">●</span>
+                    <span>
+                        <strong>Available</strong>
+                        <small>Ready to park</small>
+                    </span>
+                    <b>→</b>
+                </button>
+
+                <button class="smart-filter" data-filter="ev">
+                    <span class="filter-symbol ev-symbol">⚡</span>
+                    <span>
+                        <strong>EV Ready</strong>
+                        <small>Charging nearby</small>
+                    </span>
+                    <b>→</b>
+                </button>
+
+                <button class="smart-filter" data-filter="fast">
+                    <span class="filter-symbol fast-symbol">↗</span>
+                    <span>
+                        <strong>Fast Exit</strong>
+                        <small>Near Exit B</small>
+                    </span>
+                    <b>→</b>
+                </button>
+
+                <button class="smart-filter" data-filter="quiet">
+                    <span class="filter-symbol quiet-symbol">◌</span>
+                    <span>
+                        <strong>Quiet Zone</strong>
+                        <small>Less congestion</small>
+                    </span>
+                    <b>→</b>
+                </button>
+
+
+                <div class="copilot">
+
+                    <div class="copilot-head">
+                        <span class="copilot-orb">✦</span>
+
+                        <div>
+                            <strong>ParkSense</strong>
+                            <small>SMART ASSIST</small>
+                        </div>
+
+                        <span class="copilot-live">ON</span>
+                    </div>
+
+                    <p id="copilotText">
+                        Select your vehicle and I'll suggest a suitable available slot.
+                    </p>
+
+                    <button id="copilotButton">
+                        Find Best Match
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+
+                <div class="sidebar-tip">
+                    <span>💡</span>
+                    <p>
+                        <strong>Tip</strong>
+                        Hover over a parking bay to see distance, security and zone details.
+                    </p>
+                </div>
+
+            </aside>
+
+
+            <!-- CENTER PARKING MAP -->
+            <section class="parking-map-wrap reveal">
+
+                <div class="map-topbar">
+
+                    <div>
+                        <span class="map-live-dot"></span>
+                        LIVE DIGITAL PARKING MAP
+                    </div>
+
+                    <div class="map-actions">
+                        <button id="zoomOut">−</button>
+                        <span id="zoomValue">100%</span>
+                        <button id="zoomIn">+</button>
+                    </div>
+
+                </div>
+
+
+                <div class="parking-map" id="parkingMap">
+
+                    <div class="map-glow"></div>
+
+                    <!-- ENTRY -->
+                    <div class="gate entry-gate" id="entryGate">
+                        <span class="gate-light"></span>
+                        <strong>ENTRY</strong>
+                        <small id="entryStatus">OPEN</small>
+                        <div class="barrier"></div>
+                    </div>
+
+                    <!-- EXIT -->
+                    <div class="gate exit-gate" id="exitGate">
+                        <span class="gate-light"></span>
+                        <strong>EXIT</strong>
+                        <small id="exitStatus">OPEN</small>
+                        <div class="barrier"></div>
+                    </div>
+
+
+                    <!-- CCTV -->
+                    <div class="cctv cctv-one">
+                        <span class="camera-lens"></span>
+                        <span class="camera-scan"></span>
+                        <small>CCTV 01</small>
+                    </div>
+
+                    <div class="cctv cctv-two">
+                        <span class="camera-lens"></span>
+                        <span class="camera-scan"></span>
+                        <small>CCTV 02</small>
+                    </div>
+
+
+                    <!-- LIGHTS -->
+                    <div class="parking-light light-one">
+                        <span></span>
+                    </div>
+
+                    <div class="parking-light light-two">
+                        <span></span>
+                    </div>
+
+                    <div class="parking-light light-three">
+                        <span></span>
+                    </div>
+
+                    <div class="parking-light light-four">
+                        <span></span>
+                    </div>
+
+
+                    <!-- ROAD -->
+                    <div class="main-road">
+
+                        <div class="road-line"></div>
+
+                        <div class="road-arrow arrow-one">↑</div>
+                        <div class="road-arrow arrow-two">↑</div>
+                        <div class="road-arrow arrow-three">↓</div>
+
+                        <span class="road-label">ONE WAY</span>
+                    </div>
+
+
+                    <!-- NAVIGATION ROUTE -->
+                    <div class="navigation-route" id="navigationRoute">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+
+                    <!-- SLOT AREA -->
+                    <div class="slot-area left-slots" id="leftSlots"></div>
+                    <div class="slot-area right-slots" id="rightSlots"></div>
+
+
+                    <!-- FLOOR LABEL -->
+                    <div class="floor-label">
+                        FLOOR <strong id="mapFloor">01</strong>
+                    </div>
+
+                    <!-- MAP COMPASS -->
+                    <div class="map-compass">
+                        <span>N</span>
+                        <div>↑</div>
+                    </div>
+
+                    <!-- LIGHTS CONTROL -->
+                    <button class="map-control light-control" id="lightsButton">
+                        💡
+                        <span>LIGHTS</span>
+                    </button>
+
+                    <!-- CCTV CONTROL -->
+                    <button class="map-control camera-control" id="cctvButton">
+                        ◉
+                        <span>CCTV</span>
+                    </button>
+
+                </div>
+
+
+                <!-- LEGEND -->
+                <div class="map-legend">
+
+                    <span>
+                        <i class="legend-dot available"></i>
+                        Available
+                    </span>
+
+                    <span>
+                        <i class="legend-dot occupied"></i>
+                        Occupied
+                    </span>
+
+                    <span>
+                        <i class="legend-dot reserved"></i>
+                        Reserved
+                    </span>
+
+                    <span>
+                        <i class="legend-dot selected"></i>
+                        Selected
+                    </span>
+
+                    <span>
+                        <i class="legend-dot ev"></i>
+                        EV
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT DETAILS -->
+            <aside class="slot-panel reveal" id="slotPanel">
+
+                <div class="panel-header">
+                    <div>
+                        <span class="section-kicker">SPACE DETAILS</span>
+                        <h3 id="detailTitle">Select a parking slot</h3>
+                    </div>
+
+                    <button class="close-panel" id="closePanel">×</button>
+                </div>
+
+
+                <div class="empty-slot-state" id="emptySlotState">
+
+                    <div class="radar-animation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <b>⌖</b>
+                    </div>
+
+                    <h4>Find your space</h4>
+
+                    <p>
+                        Select an available parking bay from the map to view
+                        its details and navigation route.
+                    </p>
+
+                </div>
+
+
+                <div class="selected-slot-content" id="selectedSlotContent">
+
+                    <div class="selected-slot-visual">
+
+                        <div class="slot-big-number" id="detailSlotId">
+                            B14
+                        </div>
+
+                        <span class="availability-pill" id="detailStatus">
+                            AVAILABLE
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-price">
+                        <small>ESTIMATED RATE</small>
+                        <strong id="detailPrice">₹40</strong>
+                        <span>/ hour</span>
+                    </div>
+
+
+                    <div class="detail-grid">
+
+                        <div>
+                            <small>Distance</small>
+                            <strong id="detailDistance">32 m</strong>
+                        </div>
+
+                        <div>
+                            <small>Walk</small>
+                            <strong id="detailWalk">1 min</strong>
+                        </div>
+
+                        <div>
+                            <small>Security</small>
+                            <strong id="detailSecurity">CCTV</strong>
+                        </div>
+
+                        <div>
+                            <small>Zone</small>
+                            <strong id="detailZone">Quick</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-features">
+
+                        <span id="detailLighting">💡 Well Lit</span>
+                        <span id="detailExit">↗ Exit B</span>
+                        <span id="detailVehicle">🚗 Car</span>
+
+                    </div>
+
+
+                    <button class="route-button" id="routeButton">
+                        <span>⌁</span>
+                        START NAVIGATION
+                        <b>→</b>
+                    </button>
+
+                    <button class="secondary-action" id="reserveButton">
+                        Mark for Parking
+                    </button>
+
+                </div>
+
+
+                <div class="route-progress" id="routeProgress">
+
+                    <div class="route-progress-head">
+                        <strong>Navigation Active</strong>
+                        <span id="routePercent">0%</span>
+                    </div>
+
+                    <div class="progress-track">
+                        <span id="progressBar"></span>
+                    </div>
+
+                    <p id="routeMessage">
+                        Calculating route from entrance...
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===================== CUSTOMER BENEFITS ===================== -->
+<section class="benefits-section" id="features">
+
+    <div class="container">
+
+        <div class="section-heading centered reveal">
+            <span class="section-kicker">WHY PARKEASE</span>
+
+            <h2>
+                Less searching.
+                <span>More parking.</span>
+            </h2>
+
+            <p>
+                Designed around the real problems customers face inside busy parking areas.
+            </p>
+        </div>
+
+
+        <div class="benefit-layout">
+
+            <article class="benefit-card large-benefit reveal">
+
+                <div class="benefit-number">01</div>
+
+                <div class="benefit-icon green-icon">⌖</div>
+
+                <h3>Find the right slot</h3>
+
+                <p>
+                    Quickly identify available spaces instead of driving around
+                    looking for an empty bay.
+                </p>
+
+                <div class="benefit-visual slot-finder-visual">
+                    <span class="route-mini"></span>
+                    <i>ENTRY</i>
+                    <b>★</b>
+                    <em>YOUR SLOT</em>
+                </div>
+
+            </article>
+
+
+            <article class="benefit-card reveal">
+
+                <div class="benefit-number">02</div>
+
+                <div class="benefit-icon purple-icon">↗</div>
+
+                <h3>Navigate inside</h3>
+
+                <p>
+                    A visual route connects the entrance to the selected parking bay.
+                </p>
+
+                <div class="mini-route-visual">
+                    <span>ENTRY</span>
+                    <i></i>
+                    <b>YOU</b>
+                    <i></i>
+                    <span>PARK</span>
+                </div>
+
+            </article>
+
+
+            <article class="benefit-card reveal">
+
+                <div class="benefit-number">03</div>
+
+                <div class="benefit-icon orange-icon">⚡</div>
+
+                <h3>EV-friendly parking</h3>
+
+                <p>
+                    Filter charging-compatible spaces when driving an electric vehicle.
+                </p>
+
+                <div class="ev-visual">
+                    <span>⚡</span>
+                    <div>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="benefit-card reveal wide-benefit">
+
+                <div class="benefit-number">04</div>
+
+                <div class="benefit-icon blue-icon">◉</div>
+
+                <h3>Know the environment</h3>
+
+                <p>
+                    Parking zones can show lighting, CCTV coverage and exit proximity,
+                    helping customers choose a more suitable space.
+                </p>
+
+                <div class="environment-visual">
+                    <span>📹</span>
+                    <span>💡</span>
+                    <span>↗</span>
+                    <span>✓</span>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="journey-section" id="how-it-works">
+
+    <div class="container">
+
+        <div class="section-heading centered reveal">
+            <span class="section-kicker">SIMPLE PARKING JOURNEY</span>
+
+            <h2>
+                Find.
+                <span>Navigate.</span>
+                Park.
+            </h2>
+        </div>
+
+
+        <div class="journey-line">
+
+            <div class="journey-step reveal">
+                <div class="journey-icon">01</div>
+                <span class="journey-line-dot"></span>
+                <h3>Choose vehicle</h3>
+                <p>Tell ParkEase whether you're parking a car, bike or EV.</p>
+            </div>
+
+            <div class="journey-step reveal">
+                <div class="journey-icon">02</div>
+                <span class="journey-line-dot"></span>
+                <h3>Find a slot</h3>
+                <p>Explore live availability and choose a suitable space.</p>
+            </div>
+
+            <div class="journey-step reveal">
+                <div class="journey-icon">03</div>
+                <span class="journey-line-dot"></span>
+                <h3>Follow route</h3>
+                <p>Start the simulated indoor route from entrance to bay.</p>
+            </div>
+
+            <div class="journey-step reveal">
+                <div class="journey-icon">04</div>
+                <span class="journey-line-dot"></span>
+                <h3>Park & exit</h3>
+                <p>Park confidently and use the displayed exit information.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===================== SIMULATION ===================== -->
+<section class="simulation-section">
+
+    <div class="container">
+
+        <div class="simulation-box reveal">
+
+            <div class="simulation-copy">
+
+                <span class="section-kicker">DEMO MODE</span>
+
+                <h2>
+                    See what happens
+                    <span>when parking gets busy.</span>
+                </h2>
+
+                <p>
+                    Simulate a rush-hour situation and watch availability,
+                    parking flow and the activity feed change dynamically.
+                </p>
+
+                <button class="primary-button" id="rushButton">
+                    Start Rush Hour
+                    <span>↗</span>
+                </button>
+
+            </div>
+
+            <div class="simulation-screen">
+
+                <div class="screen-top">
+                    <span>LIVE SIMULATION</span>
+                    <i></i>
+                </div>
+
+                <div class="traffic-bars">
+                    <span style="height:42%"></span>
+                    <span style="height:62%"></span>
+                    <span style="height:48%"></span>
+                    <span style="height:78%"></span>
+                    <span style="height:68%"></span>
+                    <span style="height:90%"></span>
+                    <span style="height:73%"></span>
+                    <span style="height:95%"></span>
+                </div>
+
+                <div class="screen-status">
+                    <div>
+                        <small>FLOW</small>
+                        <strong id="simulationFlow">82%</strong>
+                    </div>
+
+                    <div>
+                        <small>STATUS</small>
+                        <strong id="simulationStatus">NORMAL</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===================== ACTIVITY ===================== -->
+<section class="activity-section">
+
+    <div class="container activity-layout">
+
+        <div class="activity-content reveal">
+
+            <span class="section-kicker">LIVE ACTIVITY</span>
+
+            <h2>
+                Parking activity,
+                <span>at a glance.</span>
+            </h2>
+
+            <p>
+                This frontend simulation keeps the customer informed about
+                recent parking events and system activity.
+            </p>
+
+            <div class="activity-metrics">
+
+                <div>
+                    <span class="metric-icon">↗</span>
+                    <strong id="entryMetric">18</strong>
+                    <small>Entries today</small>
+                </div>
+
+                <div>
+                    <span class="metric-icon">↙</span>
+                    <strong id="exitMetric">13</strong>
+                    <small>Exits today</small>
+                </div>
+
+                <div>
+                    <span class="metric-icon">⚡</span>
+                    <strong>6</strong>
+                    <small>EV sessions</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="activity-feed reveal" id="activityFeed">
+
+            <div class="feed-item">
+                <span class="feed-icon green-feed">●</span>
+                <div>
+                    <strong>Slot A07 became available</strong>
+                    <small>Just now • Ground Floor</small>
+                </div>
+                <time>now</time>
+            </div>
+
+            <div class="feed-item">
+                <span class="feed-icon blue-feed">↗</span>
+                <div>
+                    <strong>Vehicle entered Gate A</strong>
+                    <small>2 min ago • Car</small>
+                </div>
+                <time>2m</time>
+            </div>
+
+            <div class="feed-item">
+                <span class="feed-icon purple-feed">⚡</span>
+                <div>
+                    <strong>EV station B03 available</strong>
+                    <small>4 min ago • Charging zone</small>
+                </div>
+                <time>4m</time>
+            </div>
+
+            <div class="feed-item">
+                <span class="feed-icon orange-feed">◉</span>
+                <div>
+                    <strong>CCTV scan completed</strong>
+                    <small>6 min ago • Zone B</small>
+                </div>
+                <time>6m</time>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+        <div class="footer-brand">
+
+            <a href="#top" class="brand">
+                <span class="brand-mark">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <span>
+                    <strong>Park<span>Ease</span></strong>
+                    <small>SMART PARKING</small>
+                </span>
+            </a>
+
+            <p>
+                A frontend smart parking simulation designed to make
+                finding a parking space simpler and more visual.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+            <h4>Explore</h4>
+            <a href="#parking">Find a Slot</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it works</a>
+        </div>
+
+
+        <div class="footer-column">
+            <h4>Smart Tools</h4>
+            <a href="#parking">Nearest Slot</a>
+            <a href="#parking">EV Finder</a>
+            <a href="#parking">Fast Exit</a>
+        </div>
+
+
+        <div class="footer-status">
+
+            <span class="footer-live">
+                <i></i>
+                SYSTEM ONLINE
+            </span>
+
+            <strong>Park smarter.</strong>
+            <small>Drive less. Find faster.</small>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <span>© 2026 ParkEase • Internship Major Project</span>
+
+        <span>
+            Frontend Simulation • HTML • CSS • JavaScript
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- ===================== SLOT MODAL ===================== -->
+<div class="modal-overlay" id="demoModal">
+
+    <div class="demo-modal">
+
+        <button class="modal-close" id="modalClose">×</button>
+
+        <div class="modal-visual">
+            <div class="modal-car">🚗</div>
+            <span class="modal-road"></span>
+        </div>
+
+        <span class="section-kicker">PARKEASE DEMO</span>
+
+        <h2>Parking without the guesswork.</h2>
+
+        <p>
+            Select a vehicle, explore live parking spaces, choose a suitable
+            bay and start the simulated navigation route.
+        </p>
+
+        <button class="primary-button" id="modalStartButton">
+            Explore Parking
+            <span>→</span>
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ===================== TOAST ===================== -->
+<div class="toast" id="toast">
+
+    <span class="toast-icon">✓</span>
+
+    <div>
+        <strong id="toastTitle">Done</strong>
+        <p id="toastMessage">Action completed.</p>
+    </div>
+
+    <button id="toastClose">×</button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
